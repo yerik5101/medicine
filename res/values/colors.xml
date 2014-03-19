@@ -1,0 +1,16 @@
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    
+    <color name="app_bg">#f8f8f8</color>
+    <color name="rose_red">#cc0179</color>
+    
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_c9c9c9">#c9c9c9</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_f3007a">#f3007a</color>
+    
+    <!-- 分割线 -->
+    <color name="color_d4d4d4">#d4d4d4</color>		
+</resources>
