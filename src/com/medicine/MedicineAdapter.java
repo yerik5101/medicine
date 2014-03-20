@@ -61,6 +61,7 @@ public class MedicineAdapter extends BaseAdapter{
 		}
 		MedicineBean mb = list.get(position);
 		System.out.println("holder is:"+holder+"  mb is:"+mb+" postion is:"+position);
+		holder.medicine_name.getPaint().setFakeBoldText(true);
 		holder.medicine_name.setText(mb.getName());
 		holder.medicine_suit_symptom.setText(mb.getSuitSymptom());
 		int picId = Utils.getResource(context, "pic_"+(position+1));

@@ -7,12 +7,13 @@
 	    android:id="@+id/item_left"
 	    android:layout_width="wrap_content"
 	    android:layout_height="match_parent"
-	    android:layout_centerVertical="true">
+	    android:layout_centerVertical="true"
+	    android:padding="5dp">
 	    
 	    <ImageView 
 	        android:id="@+id/medicine_pic"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
+	        android:layout_width="107dp"
+	        android:layout_height="80dp"
 	        android:scaleType="centerCrop"/>
 	    
 	</RelativeLayout>
@@ -21,17 +22,44 @@
 	    android:id="@+id/item_right"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_centerVertical="true"
+		android:paddingTop="5dp"
+		android:paddingRight="5dp"
 	    android:layout_toRightOf="@id/item_left">
 	    
-	    <TextView 
-	        android:id="@+id/medicine_name"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"/>
-	    <TextView 
-	        android:id="@+id/medicine_suit_symptom"
-	        android:layout_width="wrap_content"
+	    <LinearLayout 
+	        android:id="@+id/line_1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+	        
+	        <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="药品名称:"/>
+	        <TextView 
+		        android:id="@+id/medicine_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#000000"
+		        android:maxLines="2"/>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/line_2"
+	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_below="@id/medicine_name"/>
+	        android:layout_below="@id/line_1"
+	        android:layout_marginTop="3dp">
+	        
+	        <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="适应症状:"/>
+	        <TextView 
+		        android:id="@+id/medicine_suit_symptom"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:maxLines="2"/>
+	    </LinearLayout>
+	    
 	</RelativeLayout>
 </RelativeLayout>
