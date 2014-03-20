@@ -24,14 +24,14 @@
     
     <!-- 标题栏的样式 -->  
     <style name="Widget.DEMO.ActionBar" parent="Widget.Sherlock.ActionBar.Solid">     
-        <item name="background">@color/rose_red</item>  
-        <item name="backgroundStacked">@color/rose_red</item>  
-        <item name="backgroundSplit">@color/rose_red</item>  
+        <item name="background">@color/theme</item>  
+        <item name="backgroundStacked">@color/theme</item>  
+        <item name="backgroundSplit">@color/theme</item>  
         <item name="titleTextStyle">@style/Widget.DEMO.ActionBar.Title</item>  
           
-        <item name="android:background">@color/rose_red</item>  
-        <item name="android:backgroundStacked">@color/rose_red</item>  
-        <item name="android:backgroundSplit">@color/rose_red</item>  
+        <item name="android:background">@color/theme</item>  
+        <item name="android:backgroundStacked">@color/theme</item>  
+        <item name="android:backgroundSplit">@color/theme</item>  
         <item name="android:titleTextStyle">@style/Widget.DEMO.ActionBar.Title</item>  
     </style>  
       

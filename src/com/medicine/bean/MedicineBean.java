@@ -9,7 +9,7 @@ public class MedicineBean {
 	private String noSuitSymptom;			//禁忌症
 	private String useAndQuantity;			//用法用量
 	private String badSymptom;				//不良反应
-	private String Precautions;				//注意事项
+	private String precautions;				//注意事项
 	private String mateForbid;				//配伍禁忌
 	private String observation;				//观察要点
 	private String pic;						//图片
@@ -59,10 +59,10 @@ public class MedicineBean {
 		this.badSymptom = badSymptom;
 	}
 	public String getPrecautions() {
-		return Precautions;
+		return precautions;
 	}
 	public void setPrecautions(String precautions) {
-		Precautions = precautions;
+		this.precautions = precautions;
 	}
 	public String getMateForbid() {
 		return mateForbid;
