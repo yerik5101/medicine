@@ -1,10 +1,15 @@
 package com.medicine;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.medicine.bean.MedicineBean;
@@ -58,5 +63,22 @@ public class MainActivity extends Activity {
 	private void fillData(){
 		MedicineAdapter ma = new MedicineAdapter(this,list);
 		list_view.setAdapter(ma);
+		list_view.setOnItemClickListener(new OnItemClickListener(){
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				if(list!=null&&list.size()>position){
+					MedicineBean bean = list.get(position);
+					Intent intent = new Intent(MainActivity.this,MedicineDetailActivity.class);
+					Bundle bundle = new Bundle();
+					bundle.putSerializable("bean", (Serializable) bean);
+					bundle.putInt("position", position);
+					intent.putExtra("bundle", bundle);
+					startActivity(intent);
+				}
+			}
+			
+		});
 	}
 }

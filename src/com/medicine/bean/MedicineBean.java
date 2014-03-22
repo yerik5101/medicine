@@ -1,7 +1,13 @@
 package com.medicine.bean;
 
-public class MedicineBean {
+import java.io.Serializable;
 
+public class MedicineBean implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;						
 	private String name;					//药品名称
 	private String outward;					//药品外观
@@ -16,6 +22,7 @@ public class MedicineBean {
 	private String category;				//药品类别
 	private String subject;					//子类别
 	private String autoSearchStr;			//搜索匹配
+	
 	public String getId() {
 		return id;
 	}
@@ -99,5 +106,40 @@ public class MedicineBean {
 	}
 	public void setAutoSearchStr(String autoSearchStr) {
 		this.autoSearchStr = autoSearchStr;
+	}
+	
+	public static String getTranslation(String key){
+		String trans = "";
+		if(key==null||key.equals("")){
+			return trans;
+		}
+		if(key.equals("id")){
+			trans = key;
+		}else if(key.equals("name")){
+			trans = "药品名称";
+		}else if(key.equals("outward")){
+			trans = "药品外观";
+		}else if(key.equals("suitSymptom")){
+			trans = "适应症状";
+		}else if(key.equals("noSuitSymptom")){
+			trans = "禁忌症";
+		}else if(key.equals("useAndQuantity")){
+			trans = "用法用量";
+		}else if(key.equals("badSymptom")){
+			trans = "不良反应";
+		}else if(key.equals("precautions")){
+			trans = "注意事项";
+		}else if(key.equals("mateForbid")){
+			trans = "配伍禁忌";
+		}else if(key.equals("observation")){
+			trans = "观察要点";
+		}else if(key.equals("pic")){
+			trans = "图片";
+		}else if(key.equals("category")){
+			trans = "药品类别";
+		}else if(key.equals("subject")){
+			trans = "子类别";
+		}
+		return trans;
 	}
 }
