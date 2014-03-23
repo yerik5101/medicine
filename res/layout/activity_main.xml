@@ -3,9 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- <include 
+        android:id="@+id/search_text"
+        layout="@layout/searchtext"/> -->
+        
+    <com.medicine.SearchText  
+        android:id="@+id/search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"/>
+    
 	<ListView 
 	    android:id="@+id/list_view"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent" 
+	    android:layout_below="@id/search_text"
 	    android:fadingEdge="none" />
+	
+	<LinearLayout 
+	    android:id="@+id/conver_nodata"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" 
+	    android:orientation="vertical"
+	    android:background="#ffffff"
+	    android:visibility="gone"
+	    android:layout_below="@id/search_text">
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="未搜索到结果,请输入其它名字试试!"
+	        android:layout_marginTop="40dp"
+	        android:layout_gravity="center_horizontal"/>
+	</LinearLayout>
 </RelativeLayout>

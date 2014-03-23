@@ -60,7 +60,6 @@ public class MedicineAdapter extends BaseAdapter{
 			holder = (ViewHolder) convertView.getTag();
 		}
 		MedicineBean mb = list.get(position);
-		System.out.println("holder is:"+holder+"  mb is:"+mb+" postion is:"+position);
 		holder.medicine_name.getPaint().setFakeBoldText(true);
 		holder.medicine_name.setText(mb.getName());
 		holder.medicine_suit_symptom.setText(mb.getSuitSymptom());
@@ -74,5 +73,13 @@ public class MedicineAdapter extends BaseAdapter{
         ImageView medicine_pic;
         TextView medicine_suit_symptom;
     }
+
+	public List<MedicineBean> getList() {
+		return list;
+	}
+
+	public void setList(List<MedicineBean> list) {
+		this.list = list;
+	}
 	
 }
