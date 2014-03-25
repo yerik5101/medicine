@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +22,7 @@ import com.medicine.dialog.DialogUtil;
 import com.medicine.util.JsonUtil;
 import com.medicine.util.StringUtil;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 	private static final int FILL_DATA = 0x0001;
 	private ListView list_view;
 	private List<MedicineBean> list,searchList;
@@ -135,7 +134,7 @@ public class MainActivity extends Activity {
 		MedicineBean mb14 = JsonUtil.parseJson(data14, MedicineBean.class);
 		System.out.println("json parse 14");
 		String data15 = getString(R.string.data15);
-		MedicineBean mb15 = JsonUtil.parseJson(data14, MedicineBean.class);
+		MedicineBean mb15 = JsonUtil.parseJson(data15, MedicineBean.class);
 		String data16 = getString(R.string.data15);
 		MedicineBean mb16 = JsonUtil.parseJson(data16, MedicineBean.class);
 		String data17 = getString(R.string.data17);
@@ -166,6 +165,24 @@ public class MainActivity extends Activity {
 		MedicineBean mb29 = JsonUtil.parseJson(data29, MedicineBean.class);
 		String data30 = getString(R.string.data30);
 		MedicineBean mb30 = JsonUtil.parseJson(data30, MedicineBean.class);
+		String data31 = getString(R.string.data31);
+		MedicineBean mb31 = JsonUtil.parseJson(data31, MedicineBean.class);
+		String data32 = getString(R.string.data32);
+		MedicineBean mb32 = JsonUtil.parseJson(data32, MedicineBean.class);
+		String data33 = getString(R.string.data33);
+		MedicineBean mb33 = JsonUtil.parseJson(data33, MedicineBean.class);
+		String data34 = getString(R.string.data34);
+		MedicineBean mb34 = JsonUtil.parseJson(data34, MedicineBean.class);
+		String data35 = getString(R.string.data35);
+		MedicineBean mb35 = JsonUtil.parseJson(data35, MedicineBean.class);
+		String data36 = getString(R.string.data36);
+		MedicineBean mb36 = JsonUtil.parseJson(data36, MedicineBean.class);
+		String data37 = getString(R.string.data37);
+		MedicineBean mb37 = JsonUtil.parseJson(data37, MedicineBean.class);
+		String data38 = getString(R.string.data38);
+		MedicineBean mb38 = JsonUtil.parseJson(data38, MedicineBean.class);
+		String data39 = getString(R.string.data39);
+		MedicineBean mb39 = JsonUtil.parseJson(data39, MedicineBean.class);
 		list.add(mb1);
 		list.add(mb2);
 		list.add(mb3);
@@ -196,7 +213,15 @@ public class MainActivity extends Activity {
 		list.add(mb28);
 		list.add(mb29);
 		list.add(mb30);
-		
+		list.add(mb31);
+		list.add(mb32);
+		list.add(mb33);
+		list.add(mb34);
+		list.add(mb35);
+		list.add(mb36);
+		list.add(mb37);
+		list.add(mb38);
+		list.add(mb39);
 		
 		sendFillDataMessage();
 	}

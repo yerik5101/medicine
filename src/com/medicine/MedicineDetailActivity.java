@@ -4,26 +4,27 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.view.MenuItem;
 import com.medicine.bean.MedicineBean;
 
-public class MedicineDetailActivity extends Activity{
+public class MedicineDetailActivity extends BaseActivity{
 
 	private MedicineBean medicine;
-	private int position;
 	private TextView detail_medicine_name;
-//	private ImageView detail_medicine_pic;
 	private LinearLayout detail_content;
 	
 	@Override
 	public void onCreate(Bundle b){
 		super.onCreate(b);
 		setContentView(R.layout.medicine_detail);
+		ActionBar actionBar = super.getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		initParams();
 		initView();
 	}
@@ -31,7 +32,6 @@ public class MedicineDetailActivity extends Activity{
 	private void initParams(){
 		Bundle bundle = getIntent().getBundleExtra("bundle");
 		medicine = (MedicineBean) bundle.getSerializable("bean");
-		position = bundle.getInt("position");
 	}
 	
 	private void initView(){
@@ -41,10 +41,7 @@ public class MedicineDetailActivity extends Activity{
 	
 	private void initTop(){
 		detail_medicine_name = (TextView)findViewById(R.id.detail_medicine_name);
-//		detail_medicine_pic = (ImageView)findViewById(R.id.detail_medicine_pic);
 		detail_medicine_name.setText(medicine.getName());
-//		int picId = Utils.getResource(this, "pic_"+(position+1));
-//		detail_medicine_pic.setImageResource(picId);
 	}
 	
 	private void initContent(){
@@ -110,6 +107,15 @@ public class MedicineDetailActivity extends Activity{
 	    	e.printStackTrace();
 	    }       
 	    return null;       
-	  
 	}       
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item){
+		System.out.println("item id is:"+item.getItemId());
+		if(item.getItemId() == android.R.id.home){
+            finish();
+            return true;
+        }
+		return super.onOptionsItemSelected(item);
+	}
 }
